@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <client xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="client.xsd">
+
+    <name>Jean</name>
+
+    <age>12</age>
+
+    <address>
+      <street>Jacquard</street>
+      <city>St Etienne</city>
+      <department>Rhone</department>
+      <postal-code>42000</postal-code>
+    </address>
+
+  </client>

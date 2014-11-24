@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="book.xsd">
+
+    <title>Titre</title>
+
+    <author>
+      <name>Jacquard</name>
+      <nationality>Jacquard</nationality>
+    </author>
+
+    <vendor>Amazon</vendor>
+
+    <price>Amazon</price>
+
+  </client>
