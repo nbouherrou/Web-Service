@@ -1,0 +1,35 @@
+2014-11-24 10:32:15,173 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /Users/rbo/Desktop/Web Service/test/pom.xml
+2014-11-24 10:32:16,806 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: web-service:test:0.0.1-SNAPSHOT @ /Users/rbo/Desktop/Web Service/test/pom.xml.
+2014-11-24 10:32:17,693 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: web-service:test:0.0.1-SNAPSHOT @ /Users/rbo/Desktop/Web Service/test/pom.xml.
+2014-11-24 10:32:17,743 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /test/src/main/java
+2014-11-24 10:32:17,754 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /test/src/test/java
+2014-11-24 10:32:19,846 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 4 sec
+2014-11-24 10:32:21,264 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: web-service:test:0.0.1-SNAPSHOT @ /Users/rbo/Desktop/Web Service/test/pom.xml.
+2014-11-24 10:32:21,409 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:32:21,409 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:32:21,412 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:32:21,413 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:33:05,863 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:05,863 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:33:05,865 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:05,866 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:33:19,308 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:19,308 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:33:19,310 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:19,311 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:33:25,297 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:25,298 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:33:25,305 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:33:25,306 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:50:42,007 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:50:42,008 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:50:42,010 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:50:42,010 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:54:42,714 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:54:42,715 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:54:42,719 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:54:42,719 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
+2014-11-24 10:55:11,272 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:55:11,273 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/main/resources
+2014-11-24 10:55:11,276 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-11-24 10:55:11,276 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rbo/Desktop/Web Service/test/src/test/resources
