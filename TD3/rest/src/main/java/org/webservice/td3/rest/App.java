@@ -21,6 +21,8 @@ import twitter4j.TwitterFactory;
 import twitter4j.User;
 import twitter4j.conf.ConfigurationBuilder;
 
+
+
 /**
  * Hello world!
  *
@@ -41,7 +43,7 @@ public class App {
 		String json_response_1 = twitter.TwitterGETSignedRequest(url_1);
 
 		// Affichage avec indentation du JSON
-		System.out.println(TwitterClient.TwitterPrettyJSON(json_response_1));
+		//System.out.println(TwitterClient.TwitterPrettyJSON(json_response_1));
 
 		/* __________ Question 01 ____________ */
 
@@ -142,7 +144,7 @@ public class App {
 
 		JSONArray array3 = (JSONArray) jsonObject3.get("users");
 
-		Double star_phil = 0.0;
+		Double star_phile = 0.0;
 
 		for (int i = 0; i < array3.size(); i++) {
 
@@ -155,13 +157,13 @@ public class App {
 			System.out.println(" |->Followers :  \t\t"
 					+ arrayObject.get("followers_count"));
 
-			star_phil += Double.parseDouble(arrayObject.get("followers_count")
+			star_phile += Double.parseDouble(arrayObject.get("followers_count")
 					.toString());
 
 		}
 
 		System.out.println("\n --->Star_phile Ratio :  \t\t"
-				+ (star_phil / array3.size()));
+				+ (star_phile / array3.size()));
 
 		/* __________ Question 04 ____________ */
 
@@ -180,10 +182,10 @@ public class App {
 
 		// Resultat a voir sur le mure de Twitter AHMED BACHA (@kimkero13)
 
-		// String post_response =
-		// twitter.TwitterPOSTSignedRequest(req_post.toString());
+		String post_response =
+		twitter.TwitterPOSTSignedRequest(req_post.toString());
 
-		// System.out.println(TwitterClient.TwitterPrettyJSON(post_response));
+		//System.out.println(TwitterClient.TwitterPrettyJSON(post_response));
 
 		/* __________ Question 05 ____________ */
 
@@ -198,13 +200,13 @@ public class App {
 		System.out
 				.println("**** GO FURTHER : ********************************");
 
-		final String API_KEY = "Tl20ETMXcTvWld9v0MhDJ2PdD";
+		final String API_KEY 		= "Tl20ETMXcTvWld9v0MhDJ2PdD";
 
-		final String API_SECRET = "PuSMZshFcpvcCogAnmJxMiYOJD8ly0xijD6Fd5IxAaoadqU6XW";
+		final String API_SECRET 	= "PuSMZshFcpvcCogAnmJxMiYOJD8ly0xijD6Fd5IxAaoadqU6XW";
 
-		final String TOKEN_KEY = "724433312-eOaHQoYm3qaCONExXApkfOCWqrIuUjaFLaKMHXwb";
+		final String TOKEN_KEY 		= "724433312-eOaHQoYm3qaCONExXApkfOCWqrIuUjaFLaKMHXwb";
 
-		final String TOKEN_SECRET = "nQnzRAvdzxLFpRMxhxngebtv9jAlPP8kv1IyXwwi2pKPp";
+		final String TOKEN_SECRET 	= "nQnzRAvdzxLFpRMxhxngebtv9jAlPP8kv1IyXwwi2pKPp";
 
 		final Integer MY_ID = 724433312;
 
@@ -221,10 +223,10 @@ public class App {
 		Twitter twitter4j = twitter_factory.getInstance();
 
 		/* POSTING */
-		// Status status_1 =
-		// twitter4j.updateStatus("This is a POST from TwitterJ4 framework");
-		// System.out.println("Successfully updated the status to [" +
-		// status_1.getText() + "].");
+		Status status_1 =
+		twitter4j.updateStatus("This is a POST from TwitterJ4 framework");
+		System.out.println("Successfully updated the status to [" +
+		status_1.getText() + "].");
 
 		/* Getting Timeline */
 		List<Status> statuses = twitter4j.getHomeTimeline();
