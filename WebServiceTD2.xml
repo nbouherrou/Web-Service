@@ -473,36 +473,40 @@ response :
 
 Question 6;
 
-WSDL :
 
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<!--
-Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown.
--->
 <xs:schema xmlns:tns="http://webservices.ahmed_bouherrou.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.ahmed_bouherrou.org/">
-  <xs:element name="convert" type="tns:convert"/>
-  <xs:element name="convertResponse" type="tns:convertResponse"/>
-  <xs:element name="getCurrenciesList" type="tns:getCurrenciesList"/>
-  <xs:element name="getCurrenciesListResponse" type="tns:getCurrenciesListResponse"/>
-  <xs:complexType name="convert">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg2" type="xs:double"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="convertResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:double" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getCurrenciesList">
-    <xs:sequence/>
-  </xs:complexType>
-  <xs:complexType name="getCurrenciesListResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
+<xs:element name="convert" type="tns:convert"/>
+<xs:element name="convertResponse" type="tns:convertResponse"/>
+<xs:element name="getCurrenciesList" type="tns:getCurrenciesList"/>
+<xs:element name="getCurrenciesListResponse" type="tns:getCurrenciesListResponse"/>
+<xs:complexType name="convert">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="convertResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCurrenciesList">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="getCurrenciesListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:currency" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="currency">
+<xs:sequence>
+<xs:element name="country" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="yearAdopted" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
 </xs:schema>
+
+WSDL :
 var Cacaoweb = { callbackIsRunning: function () { var cacaodiv = document.createElement("div"); cacaodiv.id = "cacaorunning"; document.body.appendChild(cacaodiv); } };
