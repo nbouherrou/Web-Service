@@ -14,6 +14,9 @@ import javax.ws.rs.core.MediaType;
 
 import com.nacer_ahmed.model.Currency;
 
+/**
+ * Version du service REST 
+ */
 @Path("currencyConverter")
 public class CurrencyConverter {
 
@@ -74,7 +77,8 @@ public class CurrencyConverter {
 
 	
 	/**
-	 * Retourne la currency selon son id (dans notre cas, entre 1-3)
+	 * Retourne la currency selon son id (dans notre cas, entre 1-3).
+	 * 
 	 * URL : 
 	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currency/:id
 	 * 
@@ -119,13 +123,10 @@ public class CurrencyConverter {
 	 * Conversion de 4500 Yens 'Y' en Euros 'E' 
 	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/converter/Y/E/4500
 	 * 
-	 * @param  String currency_source 	: id de la currency
-	 * 
-	 * @param  Integer id 	: id de la currency
-	 * 
-	 * @param  Integer id 	: id de la currency
-	 * 
-	 * @return String  		: version du web serivce REST
+	 * @param  String currency_source 		: identifiant (E/Y/D) de la currency source
+	 * @param  String currency_destination 	: identifiant (E/Y/D) de la currency de destination
+	 * @param  Double amount 				: montant a convertir
+	 * @return String  						: resultat de la conversion
 	 */
 	@GET
 	@Path("converter/{currency_source}/{currency_destination}/{amount}")
@@ -203,15 +204,33 @@ public class CurrencyConverter {
 
 	}
 	
+	
+	/**
+	 * Retourne la liste des currencies en XML.
+	 * En passant le parametre GET 'sortedYN' à 'y' , on demande une liste ordonnée.
+	 * En passant le parametre GET 'sortedYN' à une autre valeur, l'ordre de la liste est inversé.
+	 * 
+	 * HEADER :  Accept à text/xml
+	 * 
+	 * URL : 
+	 * 
+	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=y
+	 * 
+	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=n
+	 * 
+	 * @param  String sortedYN 		: Dans le cas ou c'est 'y', la liste est ordonnée
+	 * 								  Sinon, la liste est dans l'ordre inverse
+	 * @return String XML			: Liste des currencies en XML
+	 */
 	@GET
 	@Path("/currencies")
 	@Produces(MediaType.TEXT_XML)
-	// URL : http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=y
-	// URL : http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=n
 	public List<Currency> getCurrenciesXML(@QueryParam("sortedYN") String value){
 		
+		// Dans le cas ou on a sortedYN=y
 		if(value.equals("y")){
 			
+			// on ordonne la liste en spécifiant une fonction pour le  Comparator
 			Collections.sort(currencies, new Comparator<Currency>(){
 				
 				public int compare(Currency c1, Currency c2){
@@ -223,6 +242,8 @@ public class CurrencyConverter {
 			});
 			
 		}else{
+			
+			// On inverse la liste
 			Collections.reverse(currencies);
 		}
 		
@@ -230,13 +251,33 @@ public class CurrencyConverter {
 		
 	}
 	
+	
+	/**
+	 * Retourne la liste des currencies en JSON.
+	 * En passant le parametre GET 'sortedYN' à 'y' , on demande une liste ordonnée.
+	 * En passant le parametre GET 'sortedYN' à une autre valeur, l'ordre de la liste est inversé
+	 * 
+	 * HEADER :  Accept à application/json
+	 * 
+	 * URL :
+	 * 
+	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=y
+	 * 
+	 * http://localhost:8080/td4-ws/v1/converterApp/currencyConverter/currencies?sortedYN=n
+	 * 
+	 * @param  String sortedYN 		: Dans le cas ou c'est 'y', la liste est ordonnée
+	 * 								  Sinon, la liste est dans l'ordre inverse
+	 * @return String JSON			: Liste des currencies en XML
+	 */
 	@GET
 	@Path("currencies")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Currency> getCurrenciesJSON(@QueryParam("sortedYN") String value){
 		
+		// Dans le cas ou on a sortedYN=y
 		if(value.equals("y")){
 			
+			// on ordonne la liste en spécifiant une fonction pour le  Comparator
 			Collections.sort(currencies, new Comparator<Currency>(){
 				
 				public int compare(Currency c1, Currency c2){
@@ -248,6 +289,8 @@ public class CurrencyConverter {
 			});
 			
 		}else{
+			
+			// On inverse la liste
 			Collections.reverse(currencies);
 		}
 		
