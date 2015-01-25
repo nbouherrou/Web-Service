@@ -101,9 +101,9 @@ public class CurrencyConverter {
 
 		}
 
-		if (result.equals(null)) {
+		if (result == null) {
 
-			return "No currency found with id = " + id;
+			result = "No currency found with id = " + id;
 
 		}
 
